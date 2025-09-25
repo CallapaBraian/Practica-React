@@ -41,7 +41,7 @@ export default function App() {
 
       <footer className="footer">
         <div className="footer-inner">
-          <p>TP2 / TP3 — React + Router + File API — Lenguaje IV</p>
+          <p>Trabajo Práctico N°3 — Formulario de contacto con React + EmailJS</p>
         </div>
       </footer>
     </BrowserRouter>
