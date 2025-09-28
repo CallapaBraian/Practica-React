@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
 import Home from "./pages/Home";
+import Servicios from "./pages/Servicios";
 import Contact from "./pages/Contact";
 import "./styles.css";
 
@@ -14,7 +15,6 @@ function NotFound() {
 
 export default function App() {
   return (
-    // basename es importante para GitHub Pages (usa el nombre del repo)
     <BrowserRouter basename="/Practica-React">
       <header className="site-header">
         <nav className="nav">
@@ -22,6 +22,11 @@ export default function App() {
             <li>
               <NavLink to="/" end className="nav-link">
                 Inicio
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/servicios" className="nav-link">
+                Servicios
               </NavLink>
             </li>
             <li>
@@ -35,13 +40,14 @@ export default function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/servicios" element={<Servicios />} />
         <Route path="/contacto" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
 
       <footer className="footer">
         <div className="footer-inner">
-          <p>Trabajo Práctico N°3 — Formulario de contacto con React + EmailJS</p>
+          <p>TP2 / TP3 / TP4 — React + Router + File API + EmailJS — Lenguaje IV</p>
         </div>
       </footer>
     </BrowserRouter>
