@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import Servicios from "./pages/Servicios";
 import Contact from "./pages/Contact";
 import "./styles.css";
+import APIPage from "./pages/API";
 
 function NotFound() {
   return (
@@ -34,6 +35,11 @@ export default function App() {
                 Contacto
               </NavLink>
             </li>
+            <li>
+              <NavLink to="/api" className="nav-link">
+                API
+              </NavLink>
+            </li>
           </ul>
         </nav>
       </header>
@@ -43,11 +49,12 @@ export default function App() {
         <Route path="/servicios" element={<Servicios />} />
         <Route path="/contacto" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/api" element={<APIPage />} />
       </Routes>
 
       <footer className="footer">
         <div className="footer-inner">
-          <p>TP2 / TP3 / TP4 — React + Router + File API + EmailJS — Lenguaje IV</p>
+          <p>TP2 / TP3 / TP4/TP5 — React + Router + File API + EmailJS + API CLIMA— Lenguaje IV</p>
         </div>
       </footer>
     </BrowserRouter>
